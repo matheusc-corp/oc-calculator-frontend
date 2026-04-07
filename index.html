@@ -7,16 +7,33 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    
     <main>
         <h1>Calculadora Básica</h1>
-        <div class="calculator">
-            <input type="text" id="display" disabled>
-            <div class="buttons">
-                <button class="button" value="0">0</button><button class="button" value="clear">C</button><button class="button" value="/">/</button><button class="button" value="*">*</button>
-                <button class="button" value="7">7</button><button class="button" value="8">8</button><button class="button" value="9">9</button><button class="button" value="-">-</button>
-                <button class="button" value="4">4</button><button class="button" value="5">5</button><button class="button" value="6">6</button><button class="button" value="+">+</button>
-                <button class="button" value="1">1</button><button class="button" value="2">2</button><button class="button" value="3">3</button><button class="button" value="=">=</button>
-            </ul>
+
+        <div class="content">
+            <div class="calculator">
+                <input type="text" id="display" disabled>
+                    <div class="buttons">
+                        <button class="button" value="0">0</button><button class="button" value="clear">C</button><button class="button" value="/">/</button><button class="button" value="*">*</button>
+                        <button class="button" value="7">7</button><button class="button" value="8">8</button><button class="button" value="9">9</button><button class="button" value="-">-</button>
+                        <button class="button" value="4">4</button><button class="button" value="5">5</button><button class="button" value="6">6</button><button class="button" value="+">+</button>
+                        <button class="button" value="1">1</button><button class="button" value="2">2</button><button class="button" value="3">3</button><button class="button" value="=">=</button>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <section class="history">
+                <h2>Histórico</h2>
+
+                <ul id="history-list">
+                    <li>
+                        <span>firstValue operator secondValue</span>
+                        <span>result</span>
+                    </li>
+                </ul>
+            </section>
         </div>
     </main>
 
