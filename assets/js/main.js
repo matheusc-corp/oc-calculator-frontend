@@ -5,8 +5,7 @@ let valueB = 0;
 let operator = "";
 
 buttons.forEach(function(pressedButton) {
-    pressedButton.addEventListener("click", function(event) {
-        
+    pressedButton.addEventListener("click", function(event) {        
         if (pressedButton.value == "=" && displayBar.value == "") {
             displayBar.value = "Erro!";
         } else if (pressedButton.value != "=") {
@@ -16,22 +15,16 @@ buttons.forEach(function(pressedButton) {
             let values = display.split(/[\+\-\*\/]/);
             let operators = display.match(/[\+\-\*\/]/g)
 
-            valueA = values[0];
-            valueB = values[1];
+            valueA = parseInt(values[0]);
+            valueB = parseInt(values[1]);
             operator = operators[0];
-            
 
-            console.log(values);
-            console.log(operators);
-            console.log(valueA);
+            calculatorApi.calculate(valueA, operator, valueB)
+                .then(result => displayBar.value = result);
         }
 
         if (pressedButton.value == "clear") {
             displayBar.value = "";
-        }
-
-
-
-        
+        }        
     })
 })
